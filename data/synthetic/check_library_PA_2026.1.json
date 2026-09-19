@@ -1,0 +1,219 @@
+{
+  "retailer_id": "PA",
+  "version": "2026.1",
+  "effective_from": "2026-01-01",
+  "notes": "Provider A broadband checklist for phone-assisted online applications.",
+  "checks": [
+    {
+      "code": "REC_DISCLAIMER",
+      "name": "Recording disclaimer read",
+      "type": "verbatim",
+      "critical": true,
+      "weight": 10,
+      "tags": ["consent"],
+      "config": {
+        "script": "Please be advised that this call will be recorded for quality assurance and training purposes."
+      }
+    },
+    {
+      "code": "PLAN_DISCLOSURE",
+      "name": "Plan speed and pricing disclosed verbatim",
+      "type": "verbatim",
+      "critical": true,
+      "weight": 10,
+      "config": {
+        "script": "This plan provides {download} Mbps typical download speed and {upload} Mbps typical upload speed from 7 PM to 11 PM. The original plan cost is {price} dollars per month, but with the current offer you will get this plan at {promo} dollars per month for the first six months and then {price} dollars.",
+        "values": {
+          "download": "plan:service.download_mbps",
+          "upload": "plan:service.upload_mbps",
+          "price": "plan:pricing.monthly_aud",
+          "promo": "plan:pricing.promo_monthly_aud"
+        }
+      }
+    },
+    {
+      "code": "COOLING_OFF",
+      "name": "Cooling-off rights disclosed",
+      "type": "verbatim",
+      "critical": true,
+      "weight": 10,
+      "config": {
+        "script": "You have a ten business day cooling off period during which you can cancel this agreement without any penalty."
+      }
+    },
+    {
+      "code": "CIS_PROVIDED",
+      "name": "Critical information summary offered",
+      "type": "verbatim",
+      "critical": false,
+      "weight": 4,
+      "config": { "script": "A critical information summary for this plan will be emailed to you." }
+    },
+    {
+      "code": "ACCOUNT_HOLDER",
+      "name": "Account holder confirmed",
+      "type": "factual",
+      "critical": true,
+      "weight": 8,
+      "config": {
+        "source": "crm",
+        "field": "customer.account_holder_confirmed",
+        "guidance": "Customer must confirm the service will be under their name."
+      }
+    },
+    {
+      "code": "ID_NAME",
+      "name": "Full name verified as per ID",
+      "type": "factual",
+      "critical": true,
+      "weight": 6,
+      "config": { "source": "crm", "field": "customer.full_name", "guidance": "Customer states first and last name as per ID." }
+    },
+    {
+      "code": "EMAIL",
+      "name": "Email verified",
+      "type": "factual",
+      "critical": true,
+      "weight": 6,
+      "config": { "source": "crm", "field": "customer.email", "guidance": "Email address verified with the customer." }
+    },
+    {
+      "code": "PHONE",
+      "name": "Mobile number verified",
+      "type": "factual",
+      "critical": true,
+      "weight": 4,
+      "config": { "source": "crm", "field": "customer.phone", "guidance": "Mobile number verified with the customer." }
+    },
+    {
+      "code": "DOB",
+      "name": "Date of birth verified",
+      "type": "factual",
+      "critical": true,
+      "weight": 6,
+      "config": { "source": "crm", "field": "customer.dob", "guidance": "Date of birth verified with the customer." }
+    },
+    {
+      "code": "SERVICE_ADDRESS",
+      "name": "Connection address confirmed",
+      "type": "factual",
+      "critical": true,
+      "weight": 6,
+      "config": { "source": "crm", "field": "service.address", "guidance": "Connection address confirmed by the customer." }
+    },
+    {
+      "code": "PLAN_PRICE_PROMO",
+      "name": "Promotional price matches plan",
+      "type": "factual",
+      "critical": true,
+      "weight": 10,
+      "config": { "source": "plan", "field": "pricing.promo_monthly_aud", "guidance": "Promotional monthly price in dollars." }
+    },
+    {
+      "code": "PLAN_PRICE_ONGOING",
+      "name": "Ongoing price matches plan",
+      "type": "factual",
+      "critical": true,
+      "weight": 8,
+      "config": { "source": "plan", "field": "pricing.monthly_aud", "guidance": "Price after the promotional period, in dollars." }
+    },
+    {
+      "code": "PROMO_MONTHS",
+      "name": "Promotional period stated",
+      "type": "factual",
+      "critical": true,
+      "weight": 4,
+      "config": { "source": "plan", "field": "pricing.promo_months", "guidance": "Length of the promotional price in months." }
+    },
+    {
+      "code": "SPEED_TIER",
+      "name": "Speed tier stated correctly",
+      "type": "factual",
+      "critical": true,
+      "weight": 6,
+      "config": { "source": "plan", "field": "service.download_mbps", "guidance": "Typical download speed in Mbps quoted to the customer." }
+    },
+    {
+      "code": "CONTRACT_TERM",
+      "name": "Contract term stated correctly",
+      "type": "factual",
+      "critical": true,
+      "weight": 6,
+      "config": {
+        "source": "plan",
+        "field": "service.contract_months",
+        "guidance": "Contract length in months. Month to month or no lock-in means 0. Transcription may garble 'month to month'."
+      }
+    },
+    {
+      "code": "TOTAL_MIN_COST",
+      "name": "Total minimum cost disclosed correctly",
+      "type": "factual",
+      "critical": true,
+      "weight": 8,
+      "config": { "source": "plan", "field": "pricing.total_min_cost_aud", "guidance": "Total minimum cost stated by the agent, in dollars." }
+    },
+    {
+      "code": "MODEM_COST",
+      "name": "Modem cost stated correctly",
+      "type": "factual",
+      "critical": true,
+      "weight": 4,
+      "config": { "source": "plan", "field": "modem.cost_aud", "guidance": "Modem cost in dollars; 'free' means 0." }
+    },
+    {
+      "code": "PAYMENT_OFF_RECORDING",
+      "name": "Recording paused before payment details",
+      "type": "factual",
+      "critical": true,
+      "weight": 8,
+      "tags": ["compliance"],
+      "config": {
+        "source": "crm",
+        "field": "compliance.payment_taken_off_recording",
+        "guidance": "true if the agent stated the recording was muted or paused before collecting card details and resumed afterwards, or the customer entered payment details themselves online."
+      }
+    },
+    {
+      "code": "NO_MISLEADING_FEES",
+      "name": "No misleading statements about fees",
+      "type": "behaviour",
+      "critical": false,
+      "weight": 3,
+      "config": { "guidance": "NOTE if the agent guaranteed a fee shown on screen would not be charged without explaining the condition, or made other unqualified promises." }
+    },
+    {
+      "code": "OBJECTION_HANDLING",
+      "name": "Objection handling",
+      "type": "behaviour",
+      "critical": false,
+      "weight": 2,
+      "config": { "guidance": "Addresses hesitation honestly without pressure. PASS if no objection was raised." }
+    },
+    {
+      "code": "RAPPORT",
+      "name": "Rapport and clarity",
+      "type": "behaviour",
+      "critical": false,
+      "weight": 2,
+      "config": { "guidance": "Clear, patient, checks understanding; NOTE if the customer repeatedly could not follow." }
+    },
+    {
+      "code": "DEAD_AIR",
+      "name": "Dead air",
+      "type": "behaviour",
+      "critical": false,
+      "weight": 2,
+      "config": { "guidance": "NOTE if any [silence Ns] marker of 20 seconds or more appears." }
+    },
+    {
+      "code": "CARD_DATA",
+      "name": "No card data captured on recording",
+      "type": "behaviour",
+      "critical": false,
+      "weight": 3,
+      "tags": ["compliance"],
+      "config": { "guidance": "NOTE if a payment card number was spoken (it appears as [REDACTED] tokens in the transcript)." }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+qa_gate.db
+storage/
+.env
+frontend/node_modules/
+frontend/dist/
+*.pdf
+demo.md
+data/samples/audio/
+frontend/tsconfig.tsbuildinfo

@@ -1,0 +1,200 @@
+{
+  "retailer_id": "R1",
+  "version": "2026.1",
+  "effective_from": "2026-01-01",
+  "notes": "Retailer 1 energy checklist, migrated from the Excel QA form.",
+  "checks": [
+    {
+      "code": "REC_DISCLAIMER",
+      "name": "Recording disclaimer read",
+      "type": "verbatim",
+      "critical": true,
+      "weight": 10,
+      "tags": ["consent"],
+      "config": {
+        "script": "This call is being recorded for quality, training and compliance purposes. Are you happy to continue?"
+      }
+    },
+    {
+      "code": "ACCOUNT_HOLDER",
+      "name": "Account holder confirmed",
+      "type": "factual",
+      "critical": true,
+      "weight": 8,
+      "config": {
+        "source": "crm",
+        "field": "customer.account_holder_confirmed",
+        "guidance": "Customer must explicitly confirm they are the account holder or authorised on the account."
+      }
+    },
+    {
+      "code": "DMO_STATEMENT",
+      "name": "DMO reference price read verbatim",
+      "type": "verbatim",
+      "critical": true,
+      "weight": 10,
+      "config": {
+        "script": "Under the Default Market Offer, the reference price for an average residential customer in your distribution area is {reference_price} dollars per year. On this plan, based on the same usage, you would pay {percent} percent less than the reference price.",
+        "values": { "reference_price": "plan:dmo.reference_price_aud", "percent": "plan:dmo.percent_below" }
+      }
+    },
+    {
+      "code": "TCS",
+      "name": "Terms, conditions and cooling-off read",
+      "type": "verbatim",
+      "critical": true,
+      "weight": 8,
+      "config": {
+        "script": "This plan is subject to the retailer's terms and conditions, and you have a ten business day cooling off period during which you can cancel without any penalty."
+      }
+    },
+    {
+      "code": "EIC",
+      "name": "Explicit informed consent obtained",
+      "type": "verbatim",
+      "critical": true,
+      "weight": 10,
+      "config": {
+        "script": "Do you give your explicit informed consent for {retailer} to transfer your electricity supply to this plan, and do you understand that this is a binding agreement?",
+        "values": { "retailer": "Retailer 1" }
+      }
+    },
+    {
+      "code": "RATE_PEAK",
+      "name": "Rates and charges match plan",
+      "type": "factual",
+      "critical": true,
+      "weight": 10,
+      "config": {
+        "source": "plan",
+        "field": "rates.peak_c_per_kwh",
+        "guidance": "Peak usage rate quoted to the customer, in cents per kWh. Must match to within 0.05 cents."
+      }
+    },
+    {
+      "code": "RATE_SUPPLY",
+      "name": "Daily supply charge matches plan",
+      "type": "factual",
+      "critical": true,
+      "weight": 6,
+      "config": {
+        "source": "plan",
+        "field": "rates.daily_supply_c_per_day",
+        "guidance": "Daily supply charge quoted, in cents per day."
+      }
+    },
+    {
+      "code": "ADDRESS",
+      "name": "Supply address confirmed",
+      "type": "factual",
+      "critical": true,
+      "weight": 6,
+      "config": { "source": "crm", "field": "supply.address", "guidance": "Full supply address read back and confirmed." }
+    },
+    {
+      "code": "DOB",
+      "name": "Date of birth confirmed",
+      "type": "factual",
+      "critical": true,
+      "weight": 6,
+      "config": { "source": "crm", "field": "customer.dob", "guidance": "Date of birth as confirmed on the call." }
+    },
+    {
+      "code": "EMAIL",
+      "name": "Email captured",
+      "type": "factual",
+      "critical": true,
+      "weight": 6,
+      "config": {
+        "source": "crm",
+        "field": "customer.email",
+        "guidance": "Email read back to the customer. Compare character by character after normalising spoken form."
+      }
+    },
+    {
+      "code": "NMI",
+      "name": "NMI confirmed",
+      "type": "factual",
+      "critical": true,
+      "weight": 6,
+      "config": { "source": "crm", "field": "supply.nmi", "guidance": "National Metering Identifier, digits only." }
+    },
+    {
+      "code": "FUEL_TYPE",
+      "name": "Fuel type confirmed",
+      "type": "factual",
+      "critical": true,
+      "weight": 4,
+      "config": { "source": "crm", "field": "supply.fuel_type", "guidance": "electricity, gas or dual." }
+    },
+    {
+      "code": "CONCESSION",
+      "name": "Concession status confirmed",
+      "type": "factual",
+      "critical": true,
+      "weight": 4,
+      "config": { "source": "crm", "field": "customer.concession_holder", "guidance": "Whether the customer holds a concession card." }
+    },
+    {
+      "code": "LIFE_SUPPORT",
+      "name": "Life support status confirmed",
+      "type": "factual",
+      "critical": true,
+      "weight": 6,
+      "config": { "source": "crm", "field": "customer.life_support", "guidance": "Whether anyone at the premises relies on life support equipment." }
+    },
+    {
+      "code": "MOVE_IN_DATE",
+      "name": "Move-in date confirmed",
+      "type": "factual",
+      "critical": true,
+      "weight": 4,
+      "config": {
+        "source": "crm",
+        "field": "supply.move_in_date",
+        "guidance": "Only applies when the customer is moving premises. Existing connection with no CRM value is not applicable."
+      }
+    },
+    {
+      "code": "GIFT_CARD",
+      "name": "Gift card value stated correctly",
+      "type": "factual",
+      "critical": false,
+      "weight": 4,
+      "config": { "source": "plan", "field": "offer.gift_card_value_aud", "guidance": "Sign-up gift card value in dollars." }
+    },
+    {
+      "code": "DEAD_AIR",
+      "name": "Dead air",
+      "type": "behaviour",
+      "critical": false,
+      "weight": 2,
+      "config": { "guidance": "NOTE if any [silence Ns] marker of 20 seconds or more appears; cite the utterance before it." }
+    },
+    {
+      "code": "RAPPORT",
+      "name": "Rapport and tone",
+      "type": "behaviour",
+      "critical": false,
+      "weight": 2,
+      "config": { "guidance": "Warm, professional tone; uses the customer's name; listens and acknowledges." }
+    },
+    {
+      "code": "OBJECTION_HANDLING",
+      "name": "Objection handling",
+      "type": "behaviour",
+      "critical": false,
+      "weight": 2,
+      "config": { "guidance": "Addresses hesitation honestly without pressure or misleading claims. PASS if no objection was raised." }
+    },
+    {
+      "code": "CARD_DATA",
+      "name": "No card data captured on recording",
+      "type": "behaviour",
+      "critical": false,
+      "weight": 3,
+      "tags": ["compliance"],
+      "config": { "guidance": "NOTE if a payment card number was spoken (it appears as [REDACTED] tokens in the transcript)." }
+    }
+  ]
+}

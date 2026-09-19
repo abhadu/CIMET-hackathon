@@ -1,0 +1,31 @@
+Speaker 1: Good morning, am I speaking with Priya Nair?
+Speaker 2: Yes, that's me.
+Speaker 1: Lovely. This is Agent B calling from Compare Energy on behalf of Retailer 1 about the electricity plan you looked at online. This call is being recorded for quality, training and compliance purposes. Are you happy to continue?
+Speaker 2: Yes, go ahead.
+Speaker 1: Thanks Priya. Can you confirm that you are the account holder or authorised to make changes on this account?
+Speaker 2: Yes, I'm the account holder.
+Speaker 1: Your supply address is 7/22 Ocean Parade, Cronulla NSW 2230, is that right?
+Speaker 2: That's right.
+Speaker 1: And your date of birth?
+Speaker 2: Fifth of July nineteen ninety.
+Speaker 1: Thank you. I have your NMI as 4 1 0 9 8 7 6 5 4 3 2, and this is electricity only, no gas?
+Speaker 2: Yes, just electricity.
+Speaker 1: Do you hold a concession card?
+Speaker 2: Yes, I have a pensioner concession card.
+Speaker 1: And does anyone at the property rely on life support equipment?
+Speaker 2: No, nobody.
+Speaker 1: Is this an existing connection or are you moving in?
+Speaker 2: Existing, I've been here for years.
+Speaker 1: Great. It's the Retailer 1 Saver Plus plan. The peak usage rate is thirty one point nine cents per kilowatt hour, the off peak rate is twenty two point four cents, and the daily supply charge is ninety eight point five cents per day.
+Speaker 2: Okay.
+Speaker 1: Under the Default Market Offer, the reference price for an average residential customer in your distribution area is eighteen hundred dollars per year. On this plan, based on the same usage, you would pay twelve percent less than the reference price.
+Speaker 2: Sounds good.
+Speaker 1: You'll also receive a fifty dollar gift card once your first bill is paid.
+Speaker 1: This plan is subject to the retailer's terms and conditions, and you have a ten business day cooling off period during which you can cancel without any penalty.
+Speaker 2: Understood.
+Speaker 1: I'll send your welcome pack by email. Can I confirm your email address is priya dot nair at outlook dot com?
+Speaker 2: Yes, that's correct.
+Speaker 1: Do you give your explicit informed consent for Retailer 1 to transfer your electricity supply to this plan, and do you understand that this is a binding agreement?
+Speaker 2: Yes, I consent.
+Speaker 1: Wonderful. Welcome to Retailer 1, Priya. You'll receive a confirmation email shortly. Have a great day.
+Speaker 2: Thank you, bye.

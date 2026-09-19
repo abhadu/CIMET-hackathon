@@ -1,0 +1,182 @@
+{
+  "retailers": [
+    { "id": "R1", "name": "Retailer 1", "vertical": "energy" },
+    { "id": "PA", "name": "Provider A", "vertical": "broadband" }
+  ],
+  "agents": [
+    { "id": "AG-A", "name": "Agent A", "tl_id": "TL-01", "site": "Jaipur" },
+    { "id": "AG-B", "name": "Agent B", "tl_id": "TL-01", "site": "Jaipur" },
+    { "id": "AG-D", "name": "Agent D", "tl_id": "TL-02", "site": "Gold Coast" }
+  ],
+  "plans": [
+    {
+      "id": "R1-SAVER",
+      "retailer_id": "R1",
+      "name": "Saver Plus",
+      "attributes": {
+        "rates": { "peak_c_per_kwh": 31.9, "offpeak_c_per_kwh": 22.4, "daily_supply_c_per_day": 98.5 },
+        "dmo": { "reference_price_aud": 1800, "percent_below": 12 },
+        "offer": { "gift_card_value_aud": 50 }
+      }
+    },
+    {
+      "id": "PA-VALUE25",
+      "retailer_id": "PA",
+      "name": "Value nbn25",
+      "attributes": {
+        "pricing": {
+          "promo_monthly_aud": 42.9,
+          "promo_months": 6,
+          "monthly_aud": 72.9,
+          "setup_fee_aud": 0,
+          "total_min_cost_aud": 42.9
+        },
+        "service": { "speed_tier": "nbn25", "download_mbps": 25, "upload_mbps": 8.5, "contract_months": 0 },
+        "modem": { "model": "Netcomm CF40 Wi-Fi 6", "cost_aud": 0, "delivery_days": "3-5 business days" }
+      }
+    }
+  ],
+  "leads": [
+    {
+      "id": "3613790",
+      "retailer_id": "R1",
+      "agent_id": "AG-A",
+      "plan_id": "R1-SAVER",
+      "campaign": "owned_site",
+      "site": "Jaipur",
+      "tl_id": "TL-01",
+      "call_date": "2026-09-18",
+      "last_completed_step": "payment_details",
+      "crm_fields": {
+        "customer": {
+          "name": "John Smith",
+          "dob": "1984-03-12",
+          "email": "j.smith@gmial.com",
+          "account_holder_confirmed": true,
+          "concession_holder": false,
+          "life_support": false
+        },
+        "supply": {
+          "address": "14 Wattle Street, Parramatta NSW 2150",
+          "nmi": "41023456789",
+          "fuel_type": "electricity",
+          "move_in_date": null
+        }
+      },
+      "transcript": { "file": "data/samples/lead-3613790.txt", "speaker_roles": { "1": "agent", "2": "customer" } }
+    },
+    {
+      "id": "3613791",
+      "retailer_id": "R1",
+      "agent_id": "AG-B",
+      "plan_id": "R1-SAVER",
+      "campaign": "paid_search",
+      "site": "Jaipur",
+      "tl_id": "TL-01",
+      "call_date": "2026-09-18",
+      "last_completed_step": "payment_details",
+      "crm_fields": {
+        "customer": {
+          "name": "Priya Nair",
+          "dob": "1990-07-05",
+          "email": "priya.nair@outlook.com",
+          "account_holder_confirmed": true,
+          "concession_holder": true,
+          "life_support": false
+        },
+        "supply": {
+          "address": "7/22 Ocean Parade, Cronulla NSW 2230",
+          "nmi": "41098765432",
+          "fuel_type": "electricity",
+          "move_in_date": null
+        }
+      },
+      "transcript": { "file": "data/samples/lead-3613791.txt", "speaker_roles": { "1": "agent", "2": "customer" } }
+    },
+    {
+      "id": "3613792",
+      "retailer_id": "R1",
+      "agent_id": "AG-A",
+      "plan_id": "R1-SAVER",
+      "campaign": "owned_site",
+      "site": "Jaipur",
+      "tl_id": "TL-01",
+      "call_date": "2026-09-18",
+      "last_completed_step": "payment_details",
+      "crm_fields": {
+        "customer": {
+          "name": "John Smith",
+          "dob": "1984-03-12",
+          "email": "j.smith@gmial.com",
+          "account_holder_confirmed": true,
+          "concession_holder": false,
+          "life_support": false
+        },
+        "supply": {
+          "address": "14 Wattle Street, Parramatta NSW 2150",
+          "nmi": "41023456789",
+          "fuel_type": "electricity",
+          "move_in_date": null
+        }
+      }
+    },
+    {
+      "id": "4001002",
+      "retailer_id": "PA",
+      "agent_id": "AG-D",
+      "plan_id": "PA-VALUE25",
+      "campaign": "owned_site",
+      "site": "Gold Coast",
+      "tl_id": "TL-02",
+      "call_date": "2026-09-18",
+      "last_completed_step": "application_submitted",
+      "crm_fields": {
+        "customer": {
+          "full_name": "Margaret Wilson",
+          "email": "margaret.wilson@bigpond.com",
+          "phone": "0412345678",
+          "dob": "1952-06-14",
+          "account_holder_confirmed": true
+        },
+        "service": {
+          "address": "Unit 12, 45 Pacific Parade, Dee Why NSW 2099",
+          "delivery_address": "Oaks Avenue entrance, 45 Pacific Parade, Dee Why NSW 2099",
+          "previous_provider": "iPrimus",
+          "connection_date": "as soon as possible"
+        },
+        "compliance": { "payment_taken_off_recording": true }
+      }
+    },
+    {
+      "id": "4001001",
+      "retailer_id": "PA",
+      "agent_id": "AG-D",
+      "plan_id": "PA-VALUE25",
+      "campaign": "owned_site",
+      "site": "Gold Coast",
+      "tl_id": "TL-02",
+      "call_date": "2026-09-18",
+      "last_completed_step": "application_submitted",
+      "crm_fields": {
+        "customer": {
+          "full_name": "[CUSTOMER_FULL_NAME]",
+          "email": "[EMAIL]",
+          "phone": "[PHONE]",
+          "dob": "[DOB]",
+          "account_holder_confirmed": true
+        },
+        "service": {
+          "address": "[SERVICE_ADDRESS]",
+          "delivery_address": "[DELIVERY_ADDRESS]",
+          "previous_provider": "iPrimus",
+          "connection_date": "as soon as possible"
+        },
+        "compliance": { "payment_taken_off_recording": true }
+      },
+      "transcript": {
+        "file": "data/samples/call-transcript-redacted.txt",
+        "speaker_roles": { "1": "customer", "2": "agent" }
+      }
+    }
+  ]
+}

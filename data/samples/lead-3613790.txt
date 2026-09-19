@@ -1,0 +1,37 @@
+Speaker 1: Good afternoon, am I speaking with John Smith?
+Speaker 2: Yes, speaking.
+Speaker 1: Great. This is Agent A calling from Compare Energy on behalf of Retailer 1 about the electricity plan you looked at online. This call is being recorded for quality, training and compliance purposes. Are you happy to continue?
+Speaker 2: Yes, that's fine.
+Speaker 1: Thanks John. Before we go on, can you confirm that you are the account holder or authorised to make changes on this account?
+Speaker 2: Yes, I'm the account holder.
+Speaker 1: Perfect. Let me just confirm a few details. Your supply address is 14 Wattle Street, Parramatta NSW 2150, is that right?
+Speaker 2: That's correct.
+Speaker 1: And can I confirm your date of birth?
+Speaker 2: It's the twelfth of March nineteen eighty four.
+Speaker 1: Thank you. I have your National Metering Identifier, the NMI, as 4 1 0 2 3 4 5 6 7 8 9. And this is for electricity only, no gas?
+Speaker 2: Yes, just electricity.
+Speaker 1: Do you hold a concession card, for example a pensioner or health care card?
+Speaker 2: No, I don't.
+Speaker 1: And does anyone at the property rely on life support equipment?
+Speaker 2: No, nobody.
+Speaker 1: Are you moving into the property, or is this an existing connection?
+Speaker 2: Existing. I've lived here for years.
+Speaker 1: Now let me take you through the plan. It's the Retailer 1 Saver Plus plan. The peak usage rate is twenty eight point six cents per kilowatt hour, the off peak rate is twenty two point four cents, and the daily supply charge is ninety eight point five cents per day.
+Speaker 2: Okay.
+Speaker 1: Under the Default Market Offer, the reference price for an average residential customer in your distribution area is eighteen hundred dollars per year. On this plan, based on the same usage, you would pay twelve percent less than the reference price.
+Speaker 2: Sounds good.
+Speaker 1: You'll also receive a fifty dollar gift card once your first bill is paid.
+Speaker 2: Is there a lock in contract? I don't want to be stuck if it goes up.
+Speaker 1: Good question. There's no lock in contract and no exit fees, so you can leave at any time if it no longer suits you.
+Speaker 1: This plan is subject to the retailer's terms and conditions, and you have a ten business day cooling off period during which you can cancel without any penalty.
+Speaker 2: Okay, understood.
+Speaker 1: I'll send your welcome pack by email. Can I confirm your email address is j dot smith at gmail dot com?
+Speaker 2: Yes, that's right.
+[silence 47s]
+Speaker 1: Sorry about that, the system was loading. For the direct debit, could you read me the card number?
+Speaker 2: Sure, it's four five three two zero one five one one two eight three zero three six six.
+Speaker 1: Thank you, I've got that.
+Speaker 1: Do you give your explicit informed consent for Retailer 1 to transfer your electricity supply to this plan, and do you understand that this is a binding agreement?
+Speaker 2: Yes, I consent.
+Speaker 1: Wonderful. Welcome to Retailer 1, John. You'll receive a confirmation email shortly. Have a great day.
+Speaker 2: Thanks, bye.
